@@ -10,14 +10,14 @@ var getElementsByClassName = function(className
   //compare className to className.children
   var searchNode = function(node) {
     if (node.classList.contains(className)) {
-        result.push(className);
-        //push true result to result array
+      result.push(className);     
+    //push true result to result array
     }  
     //iterate through all children until complete
     for (var i = 0; i < node.children.length; i++) {
       searchNode(node.children[i]);
     }
-  }
+  };
 
   searchNode(document.body);
   //return result
